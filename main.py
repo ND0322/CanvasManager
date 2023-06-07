@@ -2,21 +2,18 @@ import canvasapi
 import openai
 import sys
 import smtplib, ssl,email
+from getpass import getpass
 
-port = 465  # For SSL
-password = "P@8687"
+
 
 # Create a secure SSL context
-context = ssl.create_default_context()
 
-with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-    server.login("nathandai03222@gmail.com", "ndai0322")
 
 url = "https://canvas.stgeorges.bc.ca/"
 
-key = "4970~3cQXu5Tkblz37E6EyCNEsG567XEjdIuIoNjGp5f4XBpjb0MFRN7UCI3odogj1fBh"
+key = getpass("canvas api key(see read me for details):")
 
-openai.api_key = "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"
+openai = getpass("chatgpt api key(see read me for details):")
 
 
 g = open("gpt.txt","a")
@@ -94,6 +91,3 @@ for course in courses:
 
 
 
-sender_email = "chipotlehelper@gmail.com"
-receiver_email = input("please enter  your email adress")
-server.sendmail(sender_email, receiver_email, "hi")
