@@ -5,7 +5,7 @@ Project for cs 8. Intended to help students manage workload and sort out there a
 Installation (kind of jankey):
   
   For mac:
-    cd into the documents folder on your computer in terminal by typing cd Documents
+    cd into the documents folder on your computer in terminal by typing cd Documents "\n"
     create a venv by typing:
     python3 -m venv VENV_NAME(in this case canvasManager is a good example)
     source VENV_NAME/bin/activate
